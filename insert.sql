@@ -19,3 +19,6 @@ INSERT INTO destinos (id, nome, descricao) VALUES
 (8, "Ilhabela", "Uma ilha cheia de praias, trilhas e cachoeiras, acessível por balsa."),
 (9, "Alter do Chão", "Apelidado de 'Caribe Amazônico', com praias de água doce e beleza única."),
 (10, "Foz do Iguaçu", "Lar das famosas Cataratas do Iguaçu, uma das maiores e mais impressionantes quedas d'água do mundo. A cidade é um destino de ecoturismo de destaque.");
+
+INSERT INTO reservas (id, id_usuario, id_destino, data, status) 
+VALUES (1, 1, 10, "1998-05-12", "pendente"), (2, 2, 7, "2034-06-14", "confirmada");
