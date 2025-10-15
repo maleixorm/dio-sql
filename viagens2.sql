@@ -13,3 +13,23 @@ DROP TABLE usuarios;
 
 ALTER TABLE viagens.usuarios_nova RENAME usuarios;
 ALTER TABLE viagens.usuarios MODIFY COLUMN endereco VARCHAR(150);
+
+ALTER TABLE viagens.usuarios 
+MODIFY COLUMN id INT AUTO_INCREMENT, 
+ADD PRIMARY KEY (id);
+
+ALTER TABLE viagens.destinos 
+MODIFY COLUMN id INT AUTO_INCREMENT, 
+ADD PRIMARY KEY (id);
+
+ALTER TABLE viagens.reservas 
+MODIFY COLUMN id INT AUTO_INCREMENT, 
+ADD PRIMARY KEY (id);
+
+ALTER TABLE viagens.reservas 
+ADD CONSTRAINT fk_reservas_usuarios
+FOREIGN KEY (id_usuario) REFERENCES usuarios (id);
+
+ALTER TABLE viagens.reservas 
+ADD CONSTRAINT fk_reservas_destinos
+FOREIGN KEY (id_destino) REFERENCES destinos (id);
