@@ -1,0 +1,1 @@
+UPDATE usuarios SET id = 3 WHERE email = "teste@teste.com";
